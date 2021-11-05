@@ -1,11 +1,14 @@
-# Zoom Tab Close
+# AWS User Consent Tab Close
 
-When joining a Zoom meeting via a browser click, the desktop app is launched. The opened tab will redirect to a "status=success" URL when the desktop app successfully joins, leaving behind an open browser tab you have to close.
+When using the AWS apps user-consent mechanism, you are redirected to
+a page telling you successfully gave consent.
 
-This addon closes those tabs automatically as soon as they redirect to "status=success"
+This addon closes those tabs automatically as soon as they are loaded.
 
-I am not a seasoned addon dev.. Please fork it, fix it, PR it.
+This is based on [Zoom Tab
+Close](https://github.com/cshields/zoom-tab-close) which does the same
+for tabs left behind by Zoom.
 
 ## Changelog
 
-v1.2 - update the "success" url pattern matching with a recent zoom change. Kudos to @aocole
+v1.0 - initial release

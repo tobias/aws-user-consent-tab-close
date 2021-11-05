@@ -1,8 +1,10 @@
-// check for a zoom "status=success" redirect and close the tab
+// check for a the aws login-success lage and close the tab
 
-var regex = /^((http[s]?):\/)?\/?((\/\w+)*)(.*)(zoom.us)((\/\w+)*\/)(.*)?(status=|#)success$/
+// matches https://foo.awsapps.com/start/user-consent/login-success.html
 
-function closeZoomTab(tabId, changeInfo, tab) {
+var regex = /^https:\/\/\w+\.awsapps\.com\/start\/user-consent\/login-success\.html$/
+
+function closeUserConsentTab(tabId, changeInfo, tab) {
     if (changeInfo.url) {
         if (regex.test(changeInfo.url)) {
             browser.tabs.remove(tabId);
@@ -10,4 +12,4 @@ function closeZoomTab(tabId, changeInfo, tab) {
     }
 }
 
-browser.tabs.onUpdated.addListener(closeZoomTab);
+browser.tabs.onUpdated.addListener(closeUserConsentTab);
