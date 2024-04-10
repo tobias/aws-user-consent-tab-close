@@ -12,3 +12,4 @@ for tabs left behind by Zoom.
 ## Changelog
 
 v1.0 - initial release
+v2.0 - rewrite to support new page scheme
